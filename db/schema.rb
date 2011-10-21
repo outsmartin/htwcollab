@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111021155704) do
+ActiveRecord::Schema.define(:version => 20111021164735) do
 
   create_table "codesnippets", :force => true do |t|
     t.string   "title"
@@ -19,5 +19,22 @@ ActiveRecord::Schema.define(:version => 20111021155704) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "lunches", :force => true do |t|
+    t.string   "name"
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "meals", :force => true do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.integer  "lunch_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "meals", ["lunch_id"], :name => "index_meals_on_lunch_id"
 
 end

@@ -1,4 +1,8 @@
 Htwcollab::Application.routes.draw do
+  resources :meals
+
+  resources :lunches
+
   resources :codesnippets
 
   # The priority is based upon order of creation:
