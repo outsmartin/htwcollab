@@ -3,6 +3,7 @@
 require "open-uri"
 require "date"
 class Lunch < ActiveRecord::Base
+  validates :name, :uniqueness => true
   has_many :meals
 
   def self.fetch_week
