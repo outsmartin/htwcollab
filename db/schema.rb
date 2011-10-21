@@ -29,7 +29,8 @@ ActiveRecord::Schema.define(:version => 20111021164735) do
 
   create_table "meals", :force => true do |t|
     t.string   "name"
-    t.decimal  "price"
+    t.decimal  "price_student"
+    t.decimal  "price_worker"
     t.integer  "lunch_id"
     t.datetime "created_at"
     t.datetime "updated_at"
