@@ -1,0 +1,9 @@
+%b Name:
+= @lunch.name
+
+= table_for(@lunch.meals) do |t|
+  = t.data
+
+= link_to 'Edit', edit_lunch_path(@lunch)
+|
+= link_to 'Back', lunches_path
