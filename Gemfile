@@ -12,7 +12,8 @@ gem 'nokogiri'
 gem 'irbtools'
 # Internationalization
 gem 'rails-i18n'
-
+gem 'tabletastic'
+gem 'haml-rails'
 # Gems used only for assets and not required
 # in production environments by default.
   gem 'sass-rails',   '~> 3.1.4'

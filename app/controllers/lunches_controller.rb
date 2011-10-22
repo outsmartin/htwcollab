@@ -23,14 +23,6 @@ class LunchesController < ApplicationController
 
   # GET /lunches/new
   # GET /lunches/new.json
-  def new
-    @lunch = Lunch.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @lunch }
-    end
-  end
 
   # GET /lunches/1/edit
   def edit
@@ -39,19 +31,6 @@ class LunchesController < ApplicationController
 
   # POST /lunches
   # POST /lunches.json
-  def create
-    @lunch = Lunch.new(params[:lunch])
-
-    respond_to do |format|
-      if @lunch.save
-        format.html { redirect_to @lunch, notice: 'Lunch was successfully created.' }
-        format.json { render json: @lunch, status: :created, location: @lunch }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @lunch.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # PUT /lunches/1
   # PUT /lunches/1.json

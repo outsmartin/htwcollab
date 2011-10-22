@@ -19,8 +19,8 @@ class Lunch < ActiveRecord::Base
 
         day.css("tbody tr").each do |meal|
           name = meal.css("td.text").inner_text
-          price_student = meal.css("td.preise").inner_text.split("/")[0].gsub(" € ","") rescue 0 #wenn ausverkauft...
-          price_worker = meal.css("td.preise").inner_text.split("/")[1].gsub(" €","").strip rescue 0
+          price_student = meal.css("td.preise").inner_text.split("/")[0].gsub(" € ","").gsub(",",".") rescue 0 #wenn ausverkauft...
+          price_worker = meal.css("td.preise").inner_text.split("/")[1].gsub(" €","").gsub(",",".").strip rescue 0
 
           Meal.create(:name => name, :price_student => price_student, :price_worker => price_worker, :lunch_id => lunch.id)
         end
