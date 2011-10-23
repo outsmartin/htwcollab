@@ -13,6 +13,7 @@ gem 'irbtools'
 # Internationalization
 gem 'rails-i18n'
 gem 'tabletastic'
+gem 'coderay'
 gem 'haml-rails'
 # Gems used only for assets and not required
 # in production environments by default.

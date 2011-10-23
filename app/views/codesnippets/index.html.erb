@@ -1,9 +1,8 @@
-<h1>Listing codesnippets</h1>
+<h1>Codesnippets</h1>
 
 <table>
   <tr>
     <th>Title</th>
-    <th>Body</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,7 +11,6 @@
 <% @codesnippets.each do |codesnippet| %>
   <tr>
     <td><%= codesnippet.title %></td>
-    <td><%= codesnippet.body %></td>
     <td><%= link_to 'Show', codesnippet %></td>
     <td><%= link_to 'Edit', edit_codesnippet_path(codesnippet) %></td>
     <td><%= link_to 'Destroy', codesnippet, confirm: 'Are you sure?', method: :delete %></td>

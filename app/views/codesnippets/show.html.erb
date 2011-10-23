@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
-  <%= @codesnippet.title %>
+  <h2><%= @codesnippet.title %></h2>
 </p>
 
 <p>
-  <b>Body:</b>
-  <%= @codesnippet.body %>
+  <b>Code:</b>
+  <%=raw CodeRay.scan(@codesnippet.body, @codesnippet.syntax.parameterize.to_sym).div %>
 </p>
 
 
